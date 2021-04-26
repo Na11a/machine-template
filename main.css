@@ -3,6 +3,7 @@
     body{
         margin: auto;
         padding: 0px;
+        width: 375px;
         font-family: Libre Franklin;
         font-style: normal;
         font-weight: normal;
@@ -27,12 +28,16 @@
         line-height: 0px;
         position: relative;
     }
-    div.header div#image_header{
+    div.hamburger{
         position: absolute;
-        left: 34px;
-        width:24px;
-        bottom: 6px;
-        display: inline-block;
+        left: 20px;
+
+    }
+    div.hamburger div{
+        width: 24px;
+        height: 1px;
+        background-color: white;
+        margin: 5px 0;
     }
     header h1{
         margin: 0px;
@@ -277,11 +282,29 @@
         font-size: 12px;
         line-height: 15px;
     }
-    footer img{
-        width: 24px;
+    .arrow {
         position: absolute;
-        bottom:64px;
-        right: 33px;
-    }
+        bottom: 70px;
+        right: 60px;
+      }
+      
+    .arrow::before,
+    .arrow::after {
+        position: relative;
+        content: '';
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: #000;
+      }
+      
+    .arrow::before {
+        transform: rotate(-45deg);
+      }
+      
+    .arrow::after {
+        left: 14px;
+        transform: rotate(45deg);
+      }
 
 /* } */
